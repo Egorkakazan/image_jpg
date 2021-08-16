@@ -7,6 +7,11 @@ fi
 
 if [[ $1 == *"FILE"* ]];
 then
+   if [ -z "$2" ];
+   then
+   echo "image.sh FILE ???"
+   exit
+   fi
 JPGS=`cat $2`
 fi
 
