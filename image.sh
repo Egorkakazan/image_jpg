@@ -13,6 +13,11 @@ fi
 MIN="360"
 for VAR in $JPGS
 do
+
+if [[ "$VAR" != *".jpg" ]];
+then continue
+fi
+
 HT=`identify -format %h $VAR 2>/dev/null`
 WT=`identify -format %w $VAR 2>/dev/null`
 
